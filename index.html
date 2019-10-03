@@ -1,1 +1,34 @@
+<html>
+<body>
+<h1> Lab </h1>    
+    <p1> In the lab, we learned how to use the console to our advantage to find things out like the mean without using a calculator. This is very useful especially when you have large data sets that would recquire a large amount of work. In the words of Dr. Bradshaw, "computer scientists are lazy", so of course they would want a quick way to find the mean instead, of computing it by hand. This is what we did as the students; we learned how to do it a quick way by using javascript. The first problem of the lab was already given to us, as we went over it in class. So, the first problem will be the one where you grab the mean of just the first penguin.</p1>
+    <h2> Problem Number 1</h2>
+    <pre>var firstAnswer =  d3.mean(classroom[0].quizes,getGrade)
 
+var answer= firstAnswer; 
+</pre>
+    <p1> So in the first one we just wanted the mean for the first penguin alone so we go to the array and we wanted the quizes alone. We already had the function to grab the array to get the grades. 
+    We also had to use d3.mean for it to give us the mean for the penguin.</p1>
+    <h2> Problem Number 2</h2>
+    <pre>
+    var getPenguinMean = function(penguin)
+ {
+   return d3.mean(penguin.quizes,getGrade)
+ }
+    
+    
+var answer= getPenguinMean(classroom[0]);
+     </pre>
+    <p1> In the second proble we wanted to find the mean for a given penguin so we had to make a brand new function that would do that. In order to do that we had to think of a relevant name, so we called it getPenguinMean and made it a function. We wanted all the objects of penguin quize grades, so we would have it return back to the penguin's grade once we make the function using the one before. This gives us a new function that we called again to see if it worked and it did.
+    </p1>
+    <h2> Problem 3 </h2>
+    <pre>  var fourthAnswer = classroom.map(getPenguinMean) </pre>
+    <p1> In this one, we had to find the mean of all the penguin. So in order to do that we had to use that map function for it to find every penguin. Since we weren't just working with just one penguin, the map function grabbed all the penguins and we ran our function from before to get the mean for all the penguins individually into an array. </p1>
+    <h3> Problem 4 </h3>
+    <pre> var answer= d3.mean(fourthAnswer);
+    </pre>
+    <p1> In this one we had to find the mean of all penguins together. The last one found the means of each penguin and put them in an array. So we have to find the mean of the array if gave us. Since we gave it name all we had to do was us d3.mean and put the array name in and it gave us the mean.  </p1>
+    
+    
+</body>
+</html>
